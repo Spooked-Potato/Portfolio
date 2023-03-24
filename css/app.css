@@ -1,0 +1,84 @@
+/*font-sizes
+  h1 --> 35px desktop / 25px mobile 
+  h2 --> 30px desktop / 20px mobile
+  p/h3 --> 18px desktop / 16px mobile
+*/
+
+:root {
+  --text-color: #ffffff;
+  --primary-color: #16ff00;
+  --body-color: #171717;
+  --second-body-color: #444444;
+  --second-color: #ededed;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: inherit;
+  font-size: 10px;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  color-scheme: dark;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+h1,
+#Portfolio {
+  padding: 4rem;
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(2.4rem, 2.5vw, 2.6rem);
+}
+
+h3,
+li {
+  font-size: clamp(1.8rem, 1.9vw, 2rem);
+}
+
+:where(p, label, a) {
+  font-size: clamp(1.6rem, 1.7vw, 1.8rem);
+}
+
+.svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 2rem;
+}
+
+.svg:hover {
+  fill: var(--primary-color);
+}
