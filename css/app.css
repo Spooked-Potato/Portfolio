@@ -18,7 +18,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: ;
+  line-height: calc(1.5em + 0.2vw) !important;
   font: inherit;
   font-size: 10px;
 }
@@ -35,6 +36,8 @@ html {
   color-scheme: dark;
   max-width: 100%;
   min-height: 100vh;
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding, 5rem);
 }
 
 body {
@@ -54,7 +57,7 @@ a {
 h1,
 #Portfolio {
   padding: 4rem;
-  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  font-size: clamp(2.5rem, 5vw, 5rem);
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
@@ -62,6 +65,9 @@ h1,
 
 h2 {
   font-size: clamp(2.4rem, 2.5vw, 2.6rem);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 h3,
@@ -73,12 +79,20 @@ li {
   font-size: clamp(1.6rem, 1.7vw, 1.8rem);
 }
 
+section {
+  padding: 6.6rem;
+}
+.wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
+}
 .svg {
   width: 25px;
   height: 25px;
   margin-right: 2rem;
 }
 
-.svg:hover {
-  fill: var(--primary-color);
+::selection {
+  background-color: var(--second-body-color);
+  color: var(--primary-color);
 }

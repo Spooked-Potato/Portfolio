@@ -1,7 +1,12 @@
 #sideMenu {
+  height: 100%;
+  width: 20rem;
   position: fixed;
-
-  padding: 5rem;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin-left: 5rem;
+  padding-top: 2rem;
 }
 
 .sideMenuList {
@@ -9,31 +14,35 @@
   transition: 0.7s;
 }
 
+.sideMenuLink {
+  color: var(--text-color);
+}
+
+.sideMenuLink:hover,
 .sideMenuList:hover {
   list-style: square;
   transform: scale(1.1);
-  color: var(--primary-color);
-}
-
-#navBar {
-  max-width: 100%;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: var(--primary-color) !important;
 }
 
 #Logo {
-  padding: 2rem;
+  padding: 1rem;
   max-width: 20rem;
 }
 
-#navSvg {
+#navBar {
+  margin: 1% 80%;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   min-width: 15%;
   max-width: 15%;
   width: 15%;
+}
+
+#mainContent {
+  margin-top: 5rem;
+  margin-left: 20rem;
 }
 
 #Portfolio {
@@ -49,7 +58,24 @@
   white-space: nowrap;
 }
 
-@media only screen and (min-width: 50em) {
+#wrapperSection-2 {
+  display: flex;
+}
+#outerBorder {
+  border: 10px solid var(--primary-color);
+  max-width: 35rem;
+}
+
+#innerBorder {
+  border: 10px solid var(--text-color);
+  margin: 1rem;
+}
+
+#Profile {
+  max-width: 27rem;
+  max-height: 47rem;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 /*KeyFrames*/

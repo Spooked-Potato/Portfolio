@@ -15,31 +15,70 @@
   </head>
   <body>
     <nav id="navBar">
-      <img id="Logo" src="/assets/logo-artur.svg" />
-      <div id="navSvg">
-        <img class="svg" src="/assets/github.svg" />
-        <img class="svg" src="/assets/linkedin-in.svg" />
-        <img class="svg" src="/assets/whatsapp.svg" />
-      </div>
+      <img class="svg" src="/assets/github.svg" />
+      <img class="svg" src="/assets/linkedin-in.svg" />
+      <img class="svg" src="/assets/whatsapp.svg" />
     </nav>
     <div id="sideMenu">
-      <li class="sideMenuList">
-        <a>Home</a>
-      </li>
-      <li class="sideMenuList">
-        <a>About me</a>
-      </li>
-      <li class="sideMenuList">
-        <a>My jobs</a>
-      </li>
-      <li class="sideMenuList">
-        <a>contact me</a>
-      </li>
+      <ul>
+        <li>
+          <img id="Logo" src="/assets/logo-artur.svg" />
+        </li>
+        <li class="sideMenuList">
+          <a class="sideMenuLink" href="#section-1">Home</a>
+        </li>
+        <li class="sideMenuList">
+          <a class="sideMenuLink" href="#section-2">About me</a>
+        </li>
+        <li class="sideMenuList">
+          <a class="sideMenuLink" href="#section-3">My jobs</a>
+        </li>
+        <li class="sideMenuList">
+          <a class="sideMenuLink" href="#section-4">contact me</a>
+        </li>
+      </ul>
     </div>
-    <h1>
-      Hello and welcome to my <br />
-      <span id="Portfolio">Portfolio</span>
-    </h1>
+    <main id="mainContent">
+      <section id="section-1">
+        <div class="wrapper">
+          <h1>
+            Hello and welcome to my <br />
+            <span id="Portfolio">Portfolio</span>
+          </h1>
+        </div>
+      </section>
+      <section id="section-2">
+        <div id="wrapperSection-2" class="wrapper">
+          <div class="box">
+            <div>
+              <h2>About me</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolores repellendus iusto sint dolor! Doloremque esse earum sed
+                ex cumque beatae? Ab eaque omnis, sit consequatur fuga nostrum
+                optio cumque suscipit?
+              </p>
+            </div>
+
+            <h2>My Skills</h2>
+            <li>AdobeXD</li>
+            <li>Html</li>
+            <li>Css</li>
+            <li>JavaScript</li>
+            <li>MYSQL</li>
+          </div>
+          <div class="box">
+            <div id="outerBorder">
+              <div id="innerBorder">
+                <img id="Profile" src="/assets/imagem-perfil.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-3"></section>
+      <section id="section-4"></section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
