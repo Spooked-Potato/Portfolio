@@ -10,6 +10,12 @@
   --body-color: #171717;
   --second-body-color: #444444;
   --second-color: #ededed;
+  --padding: 6rem;
+
+  --background-rgb: 29 30 34;
+
+  --blue-rgb: 33 150 243;
+  --primary-rgb: var(--blue-rgb);
 }
 
 *,
@@ -18,7 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: ;
   line-height: calc(1.5em + 0.2vw) !important;
   font: inherit;
   font-size: 10px;
@@ -37,11 +42,10 @@ html {
   max-width: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
-  scroll-padding: var(--scroll-padding, 5rem);
+  scroll-padding: var(--scroll-padding, 3rem);
 }
 
 body {
-  background-color: var(--body-color);
 }
 
 ul,
@@ -92,7 +96,25 @@ section {
   margin-right: 2rem;
 }
 
+.mySkillsvg {
+  height: 5rem;
+  width: 5rem;
+}
+
 ::selection {
   background-color: var(--second-body-color);
   color: var(--primary-color);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

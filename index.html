@@ -12,8 +12,14 @@
 
     <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <body>
+    <div id="blob"></div>
+    <div id="blur"></div>
     <nav id="navBar">
       <img class="svg" src="/assets/github.svg" />
       <img class="svg" src="/assets/linkedin-in.svg" />
@@ -31,7 +37,7 @@
           <a class="sideMenuLink" href="#section-2">About me</a>
         </li>
         <li class="sideMenuList">
-          <a class="sideMenuLink" href="#section-3">My jobs</a>
+          <a class="sideMenuLink" href="#section-3">My Projects</a>
         </li>
         <li class="sideMenuList">
           <a class="sideMenuLink" href="#section-4">contact me</a>
@@ -50,35 +56,93 @@
       <section id="section-2">
         <div id="wrapperSection-2" class="wrapper">
           <div class="box">
-            <div>
+            <div id="aboutMeWrapper">
               <h2>About me</h2>
-              <p>
+              <p id="aboutMeText">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Dolores repellendus iusto sint dolor! Doloremque esse earum sed
                 ex cumque beatae? Ab eaque omnis, sit consequatur fuga nostrum
                 optio cumque suscipit?
               </p>
             </div>
-
-            <h2>My Skills</h2>
-            <li>AdobeXD</li>
-            <li>Html</li>
-            <li>Css</li>
-            <li>JavaScript</li>
-            <li>MYSQL</li>
+            <div id="mySKillsWrapper">
+              <h2>My Skills</h2>
+              <ul id="mySkillsList">
+                <li class="mySkilListItem">
+                  <img src="/assets/html5.svg" class="mySkillsvg" />
+                  <label class="skills">Html</label>
+                </li>
+                <li class="mySkilListItem">
+                  <img src="/assets/css3-alt.svg" class="mySkillsvg" />
+                  <label class="skills">CSS</label>
+                </li>
+                <li class="mySkilListItem">
+                  <img src="/assets/square-js.svg" class="mySkillsvg" />
+                  <label class="skills">JavaScript</label>
+                </li>
+                <li class="mySkilListItem">
+                  <img
+                    src="/assets/adobe-xd-svgrepo-com.svg"
+                    class="mySkillsvg"
+                  />
+                  <label class="skills">AdobeXD</label>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="box">
             <div id="outerBorder">
               <div id="innerBorder">
-                <img id="Profile" src="/assets/imagem-perfil.png" />
+                <img
+                  id="Profile"
+                  src="https://picsum.photos/200/300?random=1"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="section-3"></section>
-      <section id="section-4"></section>
+      <section id="section-3">
+        <div class="wrapper">
+          <h2>Some of my Projects</h2>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper"></div>
+          </div>
+        </div>
+      </section>
+      <section id="section-4">
+        <div class="wrapper">
+          <h2>Contact Me</h2>
+          <form>
+            <label>Name</label>
+            <input name="name" type="text" placeholder="What is your name?" />
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              name="phoneNumber"
+              placeholder="What is your phone number (please input country code)"
+            />
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="What is your email address?"
+            />
+            <label>Message</label>
+            <textarea
+              type="text"
+              rows="6"
+              placeholder="Do you have any question?"
+              name="question"
+              required
+            ></textarea>
+          </form>
+        </div>
+      </section>
     </main>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/services/JsonServices.js"></script>
+    <script src="/components/projectComponent.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
