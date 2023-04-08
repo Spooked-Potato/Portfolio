@@ -42,7 +42,7 @@ html {
   max-width: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
-  scroll-padding: var(--scroll-padding, 1rem);
+  scroll-padding: var(--scroll-padding, 10rem);
 }
 
 body {
