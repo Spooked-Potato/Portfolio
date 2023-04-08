@@ -1,47 +1,17 @@
-class projectSlideshow {
-  constructor(projectService) {
-    this.projectService = projectService;
+class ProjectSlideshow {
+  constructor({ locationService, animator }) {
+    this.projectService = locationService;
+    this.animator = animator;
     this.#init();
   }
 
   async #init() {
     await this.#renderProjectSlideshow();
     this.#initSlideshow();
+    this.#animateScreens();
   }
 
   #initSlideshow() {
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-    let interval = null;
-
-    const screen = document.querySelector(".screen"),
-      name = document.querySelector(".name");
-
-    screen.onmouseenter = (event) => {
-      let iteration = 0;
-
-      clearInterval(interval);
-
-      interval = setInterval(() => {
-        name.innerText = name.innerText
-          .split("")
-          .map((letter, index) => {
-            if (index < iteration) {
-              return name.dataset.value[index];
-            }
-
-            return letters[Math.floor(Math.random() * 26)];
-          })
-          .join("");
-
-        if (iteration >= name.dataset.value.length) {
-          clearInterval(interval);
-        }
-
-        iteration += 1 / 3;
-      }, 30);
-    };
-
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
       spaceBetween: 20,
@@ -54,6 +24,14 @@ class projectSlideshow {
         el: ".swiper-pagination",
         clickable: true,
       },
+    });
+  }
+
+  #animateScreens() {
+    const screens = [...document.querySelectorAll(".screen")];
+
+    screens.forEach((screen) => {
+      this.animator.animate(screen);
     });
   }
 
