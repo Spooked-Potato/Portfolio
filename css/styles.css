@@ -290,6 +290,25 @@
   }
 }
 
+.formContainers {
+  padding: 2rem;
+}
+
+.formInput {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding: 2rem;
+}
 /*KeyFrames*/
 @keyframes background-pan {
   from {

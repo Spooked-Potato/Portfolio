@@ -34,13 +34,13 @@
           <a class="sideMenuLink" href="#section-1">Home</a>
         </li>
         <li class="sideMenuList">
-          <a class="sideMenuLink" href="#section-2">About me</a>
+          <a class="sideMenuLink" href="#section-2">About Me</a>
         </li>
         <li class="sideMenuList">
           <a class="sideMenuLink" href="#section-3">My Projects</a>
         </li>
         <li class="sideMenuList">
-          <a class="sideMenuLink" href="#section-4">contact me</a>
+          <a class="sideMenuLink" href="#section-4">Contact Me</a>
         </li>
       </ul>
     </div>
@@ -114,28 +114,32 @@
         <div class="wrapper">
           <h2>Contact Me</h2>
           <form>
-            <label>Name</label>
-            <input name="name" type="text" placeholder="What is your name?" />
-            <label>Phone Number</label>
-            <input
-              type="tel"
-              name="phoneNumber"
-              placeholder="What is your phone number (please input country code)"
-            />
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="What is your email address?"
-            />
-            <label>Message</label>
-            <textarea
-              type="text"
-              rows="6"
-              placeholder="Do you have any question?"
-              name="question"
-              required
-            ></textarea>
+            <div class="formContainers">
+              <label>Name</label>
+              <input class="formInput" name="name" type="text" />
+            </div>
+            <div class="formContainers">
+              <label>Phone Number</label>
+              <input class="formInput" type="tel" />
+            </div>
+            <div class="formContainers">
+              <label>Email</label>
+              <input class="formInput" type="email" name="email" />
+            </div>
+            <div class="formContainers">
+              <label>Message</label>
+              <textarea
+                id="textarea"
+                class="formInput"
+                type="text"
+                rows="2"
+                name="question"
+                required
+              ></textarea>
+            </div>
+            <div class="buttonContainer">
+              <button type="button" class="submit">SEND</button>
+            </div>
           </form>
         </div>
       </section>
