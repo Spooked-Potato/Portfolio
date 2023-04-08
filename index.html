@@ -21,9 +21,25 @@
     <div id="blob"></div>
     <div id="blur"></div>
     <nav id="navBar">
-      <img class="svg" src="/assets/github.svg" />
-      <img class="svg" src="/assets/linkedin-in.svg" />
-      <img class="svg" src="/assets/whatsapp.svg" />
+      <a
+        target="_blank"
+        href="https://github.com/Spooked-Potato"
+        class="svg"
+        style="background-image: url('/assets/github.svg')"
+      >
+      </a>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/artur-dias-5878b5224/"
+        class="svg"
+        style="background-image: url('/assets/linkedin-in.svg')"
+      ></a>
+      <a
+        target="_blank"
+        href="https://www.w3schools.com"
+        class="svg"
+        style="background-image: url('/assets/whatsapp.svg')"
+      ></a>
     </nav>
     <div id="sideMenu">
       <ul>
@@ -113,18 +129,36 @@
       <section id="section-4">
         <div class="wrapper">
           <h2>Contact Me</h2>
-          <form>
+          <form
+            action="https://formsubmit.co/arturdiasdev@outlook.com"
+            method="POST"
+          >
             <div class="formContainers">
               <label>Name</label>
-              <input class="formInput" name="name" type="text" />
+              <input
+                class="formInput"
+                name="Name"
+                type="text"
+                placeholder="Type in your name"
+              />
             </div>
             <div class="formContainers">
               <label>Phone Number</label>
-              <input class="formInput" type="tel" />
+              <input
+                class="formInput"
+                type="tel"
+                name="Phone Number"
+                placeholder="Type in your phone number"
+              />
             </div>
             <div class="formContainers">
               <label>Email</label>
-              <input class="formInput" type="email" name="email" />
+              <input
+                class="formInput"
+                type="email"
+                name="Email"
+                placeholder="Type in your email"
+              />
             </div>
             <div class="formContainers">
               <label>Message</label>
@@ -133,12 +167,20 @@
                 class="formInput"
                 type="text"
                 rows="2"
-                name="question"
+                name="Message"
                 required
               ></textarea>
             </div>
+            <input type="hidden" name="_subject" value="New submission!" />
+            <input type="text" name="_honey" style="display: none" />
+            <input type="hidden" name="_template" value="basic" />
+            <input
+              type="hidden"
+              name="_next"
+              value="http://127.0.0.1:5500/index.html"
+            />
             <div class="buttonContainer">
-              <button type="button" class="submit">SEND</button>
+              <button type="submit" class="submit">SEND</button>
             </div>
           </form>
         </div>

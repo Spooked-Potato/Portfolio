@@ -17,3 +17,9 @@ function initProjectSlideshow() {
 }
 
 initProjectSlideshow();
+
+function sendEmail() {
+  send = document.querySelector(".submit");
+
+  sendEmail.onclick(alert("hi bananas"));
+}
